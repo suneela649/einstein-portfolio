@@ -1,0 +1,333 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8edeb;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "myTopnav myTopnav myTopnav myTopnav"
+    "about about about about"
+    "papers papers papers papers"
+    "experience experience blogs blogs"
+    "hobbies hobbies hobbies hobbies";
+}
+
+#myTopnav {
+    grid-area: myTopnav;
+}
+
+#about {
+    grid-area: about;
+}
+
+#experience {
+    grid-area: experience;
+}
+
+#blogs {
+    grid-area: blogs;
+}
+
+#hobbies {
+    grid-area: hobbies;
+}
+#papers {
+    grid-area: papers;
+}
+
+
+
+.navigation {
+    /*background-color: rgb(166, 255, 0);*/
+    background-color: #050505;
+}
+.nav_links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30%;
+    list-style: none;
+    
+    
+    /*width: 100%;*/
+}
+
+li a {
+    font-weight: 800;
+    font-size: 16px;
+    color: rgb(0, 247, 255);
+    text-decoration: none;
+    font: bold;
+}
+
+.nav_links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30%;
+    list-style: none;
+    /*width: 100%;*/
+}
+.nav_links li a:hover {
+    color: red;
+}
+
+.about-content{
+    display: flex;
+    padding: 15px;
+}
+
+.about-content p {
+    margin: 0;
+    line-height: 30px;
+    padding: 10px 15px;
+}
+
+.about-img{
+    width: 250px;
+    height: 300px;
+    border-radius: 5px;
+}
+#abouttext{
+    background-color: #746862;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px;
+        
+}
+h1{
+    background-color: #000;
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 5px 0;
+    color: #fff;
+}
+
+.paper{
+    border-radius: 5px;
+    text-align: center;    
+    background: #fff;
+    border: solid 2px #000;
+    padding: 15px 10px;
+    max-width: 270px;
+    
+}
+.paper a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+.paper-img {
+    width: 200px;
+    height: 260px;
+}
+.papers2{
+    width: 205px;
+    height: 200px;
+    border-radius: 5px;
+    margin: 2% 4%;
+    border: 2px solid black;
+    background-image: linear-gradient(rgb(104, 186, 84), rgb(250, 238, 231));
+    display: inline-block;
+    text-align: center;    
+   
+    
+}
+
+#experience{
+    background-color: #ffa777;
+    padding: 15px;
+}
+#papers{
+    text-align: center; 
+    padding: 15px;
+    background-color: #69a5a4;
+}
+.papers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 15px;
+}
+.papers1, .papers2 {
+    transition: transform .3s;
+}
+
+.papers1:hover, .papers2:hover {
+    transform: scale(1.1);
+}
+
+#hobbies{
+    /* height: 1150px; */
+    background-color: #999b9d;
+    padding: 15px;
+}
+
+.images {
+display: flex;
+flex-wrap: wrap;
+}
+.image-container{
+    margin: 10px;
+    /* width: 350px;
+    height: 500px; */
+    text-align: center;
+    /*top: 0;*/
+    color: #fff;
+    font-weight: bolder;
+    /*background-color: #cc78ee;*/
+}
+
+.image-container p{
+    font-size: 20px;
+}
+
+.image-container div img {
+    width: 250px;
+    height: 300px;
+    border: 5px solid #fff
+}
+#blogs{
+    /* background-image: linear-gradient(rgb(167, 186, 84), rgb(209, 181, 120)); */
+    padding: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    /*padding-top: 1px;*/
+    background-color: #050505;
+    color: white;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.topnav {
+    background-color: #1e1a18;
+    color: #fff;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .topnav a:hover {
+    background-color: #910101;
+    color: bisque;
+  }
+  
+  .topnav .icon {
+    display: none;
+    color: #fff;
+  }
+  .gray-bg{   
+    color: whitesmoke;
+ }
+
+@media screen and (max-width: 800px) {
+    #container {
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+    .navigation {
+        text-align: center;
+        width: auto;
+
+    }
+    .papers1{
+        width: 60%;
+    }
+    .papers2{
+        width: 50%;
+    }
+    
+
+    .image-container{
+        margin: 10px;
+    }
+    .nav_links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+    .navigation:hover {
+        display: block;
+        align-items: center;
+        list-style: none;
+        height: 100%;
+    }
+    .nav_links li{
+        width: 100%;
+        margin: 10px;
+    }
+    footer{
+        display: flex;
+    }
+
+    
+}
+
+@media screen and (max-width: 578px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .topnav.responsive {
+        position: relative;
+        flex-direction: column;
+    }
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .about-content{
+        flex-direction: column-reverse;
+    }
+    .papers-container, .images {
+        flex-direction: column;
+        align-items: center;
+    } 
+    .img-container {
+        text-align: center;
+    }
+    #container{
+        grid-template-areas:
+        "myTopnav"
+        "about"
+        "papers"
+        "experience"
+        "blogs"
+        "hobbies";
+        grid-template-columns: 1fr;
+    }
+}
+  
